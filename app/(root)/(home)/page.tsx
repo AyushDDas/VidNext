@@ -3,7 +3,17 @@ import React from "react";
 export const revalidate = 0;
 
 const Home = () => {
-  const now = new Date();
+  // const now = new Date();
+  // const time = now.toLocaleTimeString("en-IN", {
+  //   hour: "2-digit",
+  //   minute: "2-digit",
+  // });
+  // const date = new Intl.DateTimeFormat("en-IN", { dateStyle: "full" }).format(
+  //   now
+  // );
+  const now = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+  );
   const time = now.toLocaleTimeString("en-IN", {
     hour: "2-digit",
     minute: "2-digit",
